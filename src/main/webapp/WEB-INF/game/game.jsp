@@ -1,3 +1,4 @@
+<%@page import="cybersoft.javabackend.gamedoanso.model.Player"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="cybersoft.javabackend.gamedoanso.util.UrlConst"%>
@@ -15,6 +16,9 @@
   <body>
       <div class="container h-100 d-flex justify-content-center">
           <div class="row h-100 justify-content-center align-content-center d-flex">
+    
+                <label class="text text-success">Chào mừng <i style ="color:red"><%= session.getAttribute("uname") %></i> đến với game đoán số</label>
+              
             <form class="col-12 mt-5" action="<%=request.getContextPath() + UrlConst.GAME_PLAY %>" method="post">
         	  <input type="text" name="recordId" value="${record.id}" hidden/>
               <div class="form-group text-center">
