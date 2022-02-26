@@ -94,7 +94,6 @@ public class PlayerServlet extends HttpServlet {
 				Player player = (Player) req.getSession().getAttribute("player");
 				session.setAttribute("uname", player.getUsername());
 				
-				
 				resp.sendRedirect(req.getContextPath() + UrlConst.GAME_ROOT);
 			} else {
 				resp.sendRedirect(req.getContextPath() + UrlConst.PLAYER_LOGIN);
